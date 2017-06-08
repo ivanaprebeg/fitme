@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meal name"
+        android:maxLines="1"
+        android:id="@+id/meal_name"
+        app:layout_anchorGravity="bottom"
+        android:padding="15dp"/>
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:padding="15dp"
+        app:layout_anchorGravity="bottom"
+        app:layout_anchor="@id/meal_name"
+        android:layout_gravity="bottom"/>
+
+    <Spinner
+        android:id="@+id/food_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        app:layout_anchor="@id/category_spinner"
+        app:layout_anchorGravity="bottom"
+        android:layout_gravity="bottom"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/amount_picking_layout"
+        app:layout_anchorGravity="bottom"
+        android:layout_gravity="bottom"
+        app:layout_anchor="@id/food_spinner">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Amount in"
+            android:id="@+id/amount"
+            android:inputType="date"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="grams" />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to meal"
+        android:id="@+id/add_to_meal_button"
+        app:layout_anchor="@id/amount_picking_layout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_gravity="bottom"
+        android:padding="20dp"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clipToPadding="false"
+        android:padding="20dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_anchor="@id/add_to_meal_button"
+        app:layout_anchorGravity="bottom"
+        tools:context="hr.fitme.AddMealActivity"
+        tools:listitem="@layout/add_meal_food_intake_item" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_check_black_24dp"
+        android:id="@+id/submit_meal_button"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="invisible"
+        android:tint="#FFFFFF"/>
+
+</android.support.design.widget.CoordinatorLayout>

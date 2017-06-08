@@ -1,0 +1,145 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="hr.fitme.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap"
+            android:background="@drawable/main_header_selector">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/weight_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:contextClickable="false"
+                app:layout_collapseMode="parallax">
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <Button
+                android:id="@+id/add_weight_button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="@string/add_current_weight"
+                android:textColor="@color/icons"
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/username_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="username"
+                android:textColor="@color/colorAccent"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/height_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:text="height"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/weight_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:text="desiredWeight"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/current_bmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:text="current bmi"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/calculated_calorie_intake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:text="calorie intake daily"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seek_calorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/adjusted_calorie_intake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="adjusted calorie intake" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="15dp"
+                android:text="SUBMIT" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

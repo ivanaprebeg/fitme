@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "781938573736",
+    "project_id": "fitme-688af"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781938573736:android:60689996328b8e69",
+        "android_client_info": {
+          "package_name": "hr.fitme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781938573736-0l1rt78u55vu6n30rrl0uf5pk9ur07ml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hr.fitme",
+            "certificate_hash": "eddcdbf229b819dd01192130644b966d4b826589"
+          }
+        },
+        {
+          "client_id": "781938573736-so22ob7lijuskpl6dknfhe5l4a0v3376.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0ugmcys8Yvnppm9PY_KQRoxNo5NMpN9o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

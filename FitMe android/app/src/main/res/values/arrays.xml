@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places">jabuka banana kruska</string-array>
+    <string-array name="place_desc">nema jabule ni banane ni kruske</string-array>
+</resources>
